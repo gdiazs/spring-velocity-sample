@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head >
+    </head>
+	<body >
+		Index!
+        <form action="/spring-velocity-sample/home/save" method="POST">
+			<input name="name" value="$test.name" />
+            <button type="submit">Enviar</button>
+		</form>
+    </body>
+</html>
