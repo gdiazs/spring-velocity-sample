@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head >
-    </head>
-	<body >
-		Index!
-		Mode: $test
-    </body>
-</html>
+#set($layout='layout/test-layout.vm')
+#set($page_title="result")
+Index!
+Model: 
+<script type="text/javascript">
+	alert("$test.name");
+</script>

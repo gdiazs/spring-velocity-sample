@@ -19,6 +19,8 @@
 		<log4j.version>1.2.17</log4j.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<junit.version>4.12</junit.version>
+		<hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
+		<javax.validation.version>1.1.0.Final</javax.validation.version>
 	</properties>
 
 
@@ -65,8 +67,16 @@
 			<version>${apache-velocity-tools.version}</version>
 		</dependency>
 
-
-
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>

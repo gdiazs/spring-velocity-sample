@@ -1,8 +1,14 @@
 package com.guillermods.velocitysample.webapp.dto;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class Test{
+	
+	@NotBlank(message = "No en blanco")
 	private String name;
 	
+	@NotBlank(message = "No en blanco edad")
+	private String age;
 	
 	
 	public Test() {
@@ -26,6 +32,15 @@ public class Test{
 		return "Test [name=" + name + "]";
 	}
 
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	
 	
 	
 	

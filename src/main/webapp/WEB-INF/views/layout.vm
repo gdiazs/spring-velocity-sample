@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="#springUrl('/resources/css/main.css')">
+	<title>$!page_title</title>
+</head>
+<body>
+	 $screen_content
+	<script type="text/javascript" src="#springUrl('/resources/vendor/js/prototype-1.7.3.js')"></script>
+</body>
+</html>
