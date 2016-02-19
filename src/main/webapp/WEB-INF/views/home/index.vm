@@ -1,13 +1,11 @@
 #set($page_title="index")
 <form action="/spring-velocity-sample/home/save" method="POST">
 	Nombre:
-	#springFormInput('test.name' )<br />
+	#springFormInput('test.name')
 	${status.errorMessage}
-	Edad:
-	#springFormInput('test.age' )
 	<br />
-		<b>Errores</b>
-		${status.errorMessage}
-	
+	Edad:
+	#springFormInput('test.age')
+	${status.errorMessage}
     <button type="submit">Enviar</button>
 </form>

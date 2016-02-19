@@ -7,7 +7,7 @@ public class Test{
 	@NotBlank(message = "No en blanco")
 	private String name;
 	
-	@NotBlank(message = "No en blanco edad")
+	@NotBlank(message = "edad")
 	private String age;
 	
 	
