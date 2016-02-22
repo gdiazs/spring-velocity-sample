@@ -1,0 +1,79 @@
+
+<form method="post" action="/spring-velocity-sample/binds/inputSample">
+	
+    <label>Input Sample</label>
+	#springBind("inputSample.sampleProperty")
+    <input  name="${status.expression}" value="$!status.value"/>
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+	
+	
+	<label>Text Area Sample</label><br />
+	#springBind("inputSample.description")
+    <textarea name="${status.expression}" >$!status.value</textarea>
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+
+	<label>Checkbox Sample</label> <br />
+	#springBind("inputSample.checkedElemnts")
+	#foreach($key in $items.keySet())
+        <label>
+			<input  type="checkbox" 
+				    name="${status.expression}" 
+			        #if($!inputSample.checkedElemnts.contains("$key")) checked #end 
+			        value="$key" />
+		    $items[$key] 
+		</label><br />
+	#end
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+	
+
+	
+	<label>Select Sample</label>
+	#springBind("inputSample.selectedOption")
+    <select name="$status.expression">
+	<option selected disabled value="">Selecione</option>
+	#foreach($key in $items.keySet())
+        <option value="$key" #if($!inputSample.selectedOption == $key) selected #end >$items[$key] </option>
+	#end
+	</select>
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+	
+
+	
+	<label>Multi Select</label> <br />
+	#springBind("inputSample.selectedOptions")
+    <select name="$status.expression" multiple>
+	#foreach($key in $items.keySet())
+        <option value="$key" #if($!inputSample.selectedOptions.contains("$key")) selected #end  >$items[$key] </option>
+	#end
+	</select>
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+	
+	
+
+	<label>Radio Sample</label> <br />
+	#springBind("inputSample.selectedRadio")
+	#foreach($key in $items.keySet())
+        <label>
+			<input  type="radio" 
+				    name="${status.expression}" 
+			        #if($!inputSample.selectedRadio == $key) checked #end 
+			        value="$key" />
+		    $items[$key] 
+		</label><br />
+	#end
+	<div class="msg-error">
+		${status.errorMessage}
+	</div>
+	
+    <button>Enviar</button>
+</form>

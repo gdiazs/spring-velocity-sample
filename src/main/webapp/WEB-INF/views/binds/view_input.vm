@@ -1,0 +1,15 @@
+
+input: $!inputSample.sampleProperty<br/>
+textArea: $!inputSample.description </br>
+checkbox list:
+#foreach($item in $inputSample.checkedElemnts)
+	$item
+#end<br />
+select: $inputSample.selectedOption <br />
+multiSelect: 
+#foreach($item in $inputSample.selectedOptions)
+	$item
+#end<br />
+radio: $inputSample.selectedRadio <br />
+
+

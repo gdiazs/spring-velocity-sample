@@ -4,6 +4,7 @@ target
 .classpath
 .project
 .directory
+.springBeans
 *.class
 # Package Files #
 *.jar

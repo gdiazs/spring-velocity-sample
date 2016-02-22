@@ -1,7 +1,8 @@
 #set($layout='layout/test-layout.vm')
 #set($page_title="result")
-Index!
-Model: 
+
+$test.name <br />
+${test.age}
 <script type="text/javascript">
 	alert("$test.name");
 </script>

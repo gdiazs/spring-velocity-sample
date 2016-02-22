@@ -12,7 +12,7 @@ import com.guillermods.velocitysample.webapp.dto.Test;
 
 @Controller
 @RequestMapping("/home")
-public class HomeController {
+public class HomeController{
 
 	private Test test;
 
@@ -26,8 +26,6 @@ public class HomeController {
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String save(@Valid Test test, BindingResult result, Model model) {
-		System.out.println(test.getName());
-		System.out.println(test.getAge());
 		if (result.hasErrors()) {
 			return "home/index";
 		}
